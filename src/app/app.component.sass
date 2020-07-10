@@ -1,0 +1,67 @@
+$border-color: #ccc
+$font-family: Arial, Helvetica, sans-serif
+$account-color: #1474B1
+
+%shared
+    width: 50%
+    height:30px
+    font-size: 12px
+    padding: 5px
+
+%header-shared
+    @extend %shared
+    border-bottom: 2px solid $border-color
+
+.content 
+    width:40%
+    margin: 0 auto
+    font-family: $font-family
+
+.datashow
+    width: 100%
+    display: flex
+    flex-wrap: nowrap
+
+    .selectedClass 
+        background-color: #efefef
+
+    &-headerright
+        @extend %header-shared
+        text-align: right
+        vertical-align: text-bottom
+        flex-direction: column
+
+        .grey
+            color: grey  
+
+    &-headerleft
+        @extend %header-shared
+        text-align: left
+
+    &-columnright
+        @extend %shared
+        text-align: right
+
+        .percentageRed
+            color: red
+
+        .percentageGreen
+            color: green  
+
+    .account
+        color: $account-color 
+        font-weight: bold
+        font-size:14px
+
+    &-columnleft
+        @extend %shared 
+        text-align: left   
+
+.loadmore
+    text-align: center
+    color: $account-color
+
+.sort
+    color: $account-color
+    font-weight: bold
+    margin: 0 5px

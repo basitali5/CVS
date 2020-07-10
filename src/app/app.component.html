@@ -1,0 +1,29 @@
+
+<div class="content">
+    <div class="datashow">        
+        <div class="datashow-headerleft" (click)="sortData('accountNumber')" [ngClass]="{'selectedClass': isSelectedleft}">
+            <p>Account <span class="sort" *ngIf="isAccountAsc != undefined && isAccountAsc === false">v</span>
+                <span class="sort" *ngIf="isAccountAsc != undefined && isAccountAsc === true">^</span></p>
+        </div>
+        <div class="datashow-headerright" (click)="sortData('availableCash')" [ngClass]="{'selectedClass': !isSelectedleft}">
+            <div><span class="sort" *ngIf="isChangeAsc != undefined && isChangeAsc === false">v</span>
+                 <span class="sort" *ngIf="isChangeAsc != undefined && isChangeAsc === true">^</span>Available Cash</div>
+            <div class="grey">Today's Change</div>
+        </div>
+    </div>
+ 
+    <div class="datashow" *ngFor="let cvs of initialCvsData">        
+        <div class="datashow-columnleft" >
+            <p class="account">{{cvs.accountType}} - {{cvs.accountNumber}}</p>
+        </div>
+        <div class="datashow-columnright" >
+            <div>{{currencyFormatter(cvs.availableCash)}}</div>
+            <div class="percentageRed" 
+                [ngClass]="{'percentageRed':cvs.percentage < 0, 'percentageGreen': cvs.percentage >= 0 }">
+                {{cvs.percentage}}% / {{currencyFormatter(cvs.todayChange)}}
+            </div>
+        </div>
+    </div>
+
+    <p class="loadmore" (click)="loadAll()" *ngIf="initialCvsData.length != cvsData.length">load more</p>
+</div>

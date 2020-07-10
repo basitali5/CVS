@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "accountType": "IRA",
+        "accountNumber": 5200,
+        "availableCash": 5763.36,
+        "todayChange": 8916.69,
+        "percentage": -0.08
+    },
+    {
+        "id": 2,
+        "accountType": "AAA",
+        "accountNumber": 1812,
+        "availableCash": 2010926.10,
+        "todayChange": 38881.63,
+        "percentage": 0.21
+    },
+    {
+        "id": 3,
+        "accountType": "AAA",
+        "accountNumber": 3810,
+        "availableCash": 10050054.07,
+        "todayChange": 8916.69,
+        "percentage": 0.07
+    },
+    {
+        "id": 4,
+        "accountType": "REG",
+        "accountNumber": 2019,
+        "availableCash": 134567689.36,
+        "todayChange": 0.10,
+        "percentage": 0.00
+    },
+    {
+        "id": 5,
+        "accountType": "IRA",
+        "accountNumber": 5234,
+        "availableCash": 5963.36,
+        "todayChange": 8716.69,
+        "percentage": -0.01
+    }
+]
